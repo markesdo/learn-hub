@@ -26,11 +26,14 @@ export default async function ResourcesPage({ searchParams }: ResourcesPageProps
 
   return (
     <div className="mx-auto max-w-7xl p-4 sm:p-6 lg:p-8">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-100">
-          Learning Resources
-        </h1>
-        <p className="mt-2 text-zinc-600 dark:text-zinc-400">
+      <div className="mb-10">
+        <div className="flex items-center gap-3 mb-3">
+          <div className="h-1 w-12 bg-gradient-to-r from-zinc-900 to-zinc-600 rounded-full"></div>
+          <h1 className="text-4xl font-bold tracking-tight" style={{ color: '#18181B' }}>
+            Learning Resources
+          </h1>
+        </div>
+        <p className="text-lg ml-[3.75rem]" style={{ color: '#52525B' }}>
           Discover and share quality learning resources
         </p>
       </div>

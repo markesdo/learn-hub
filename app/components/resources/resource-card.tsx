@@ -18,15 +18,15 @@ interface ResourceCardProps {
 const typeConfig = {
   video: {
     label: 'Video',
-    className: 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200',
+    className: 'bg-blue-50 text-blue-700 dark:bg-blue-900 dark:text-blue-200',
   },
   article: {
     label: 'Article',
-    className: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
+    className: 'bg-green-50 text-green-700 dark:bg-green-900 dark:text-green-200',
   },
   pdf: {
     label: 'PDF',
-    className: 'bg-orange-100 text-orange-900 dark:bg-orange-900 dark:text-orange-200',
+    className: 'bg-orange-50 text-orange-700 dark:bg-orange-900 dark:text-orange-200',
   },
 };
 
@@ -48,7 +48,7 @@ export function ResourceCard({
             {resource.title}
           </CardTitle>
           <span
-            className={`shrink-0 rounded-full px-2.5 py-0.5 text-xs font-medium ${typeInfo.className}`}
+            className={`flex items-center shrink-0 rounded-full px-2.5 py-1 text-xs font-medium leading-none ${typeInfo.className}`}
           >
             {typeInfo.label}
           </span>
@@ -59,24 +59,25 @@ export function ResourceCard({
             : `Created ${new Date(resource.created_at).toLocaleDateString()}`}
         </CardDescription>
       </CardHeader>
-      <CardContent className="flex flex-1 flex-col space-y-4">
-        <div className="flex-1 space-y-4">
+      <CardContent className="flex flex-1 flex-col">
+        {/* Description */}
+        <div className="flex-1 mb-4">
           {resource.description && (
             <p className="line-clamp-2 text-sm text-zinc-600 dark:text-zinc-400">
               {resource.description}
             </p>
           )}
+        </div>
 
-          {/* Social Stats */}
-          <div className="flex items-center gap-4 text-xs text-zinc-600 dark:text-zinc-400">
-            <div className="flex items-center gap-1">
-              <Heart className="h-3.5 w-3.5" />
-              <span>{likeCount}</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <MessageCircle className="h-3.5 w-3.5" />
-              <span>{commentCount}</span>
-            </div>
+        {/* Social Stats */}
+        <div className="flex items-center gap-3 mb-4">
+          <div className="flex items-center gap-1.5 text-sm text-zinc-500 dark:text-zinc-400">
+            <Heart className="h-4 w-4" />
+            <span className="font-medium">{likeCount}</span>
+          </div>
+          <div className="flex items-center gap-1.5 text-sm text-zinc-500 dark:text-zinc-400">
+            <MessageCircle className="h-4 w-4" />
+            <span className="font-medium">{commentCount}</span>
           </div>
         </div>
 
@@ -120,6 +121,7 @@ export function ResourceCard({
                   size="sm"
                   disabled={onDeletePending}
                   onClick={onDelete}
+                  className="border-red-300 text-red-600 hover:bg-red-50 hover:text-red-700 hover:border-red-400"
                 >
                   <Trash2 className="mr-1 h-3 w-3" />
                   Delete

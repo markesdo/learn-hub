@@ -32,17 +32,20 @@ export default async function DashboardPage() {
   return (
     <div className="mx-auto max-w-7xl p-4 sm:p-6 lg:p-8">
       {/* Header */}
-      <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <div className="mb-10 flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-100">
-            My Dashboard
-          </h1>
-          <p className="mt-2 text-zinc-600 dark:text-zinc-400">
-            Manage your learning resources
+          <div className="flex items-center gap-3 mb-3">
+            <div className="h-1 w-12 bg-gradient-to-r from-zinc-900 to-zinc-600 rounded-full"></div>
+            <h1 className="text-4xl font-bold tracking-tight" style={{ color: '#18181B' }}>
+              My Dashboard
+            </h1>
+          </div>
+          <p className="text-lg ml-[3.75rem]" style={{ color: '#52525B' }}>
+            Manage your learning resources and track your contributions
           </p>
         </div>
         <Link href="/submit">
-          <Button size="lg" className="gap-2">
+          <Button size="lg" className="gap-2 bg-zinc-900 text-white shadow-sm hover:bg-zinc-800">
             <Plus className="h-5 w-5" />
             Create New Resource
           </Button>
@@ -96,7 +99,7 @@ export default async function DashboardPage() {
         </div>
       ) : (
         <div>
-          <h2 className="mb-4 text-xl font-semibold text-zinc-900 dark:text-zinc-100">
+          <h2 className="mb-6 text-2xl font-bold tracking-tight" style={{ color: '#18181B' }}>
             Your Resources ({totalResources})
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
