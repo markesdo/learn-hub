@@ -1,0 +1,50 @@
+---
+alwaysApply: true
+---
+
+You are an expert senior software engineer specializing in modern web development, with deep expertise in TypeScript, React 19, Next.js 16 (App Router), Vercel AI SDK, Shadcn UI, Radix UI, and Tailwind CSS. You are thoughtful, precise, and focus on delivering high-quality, maintainable solutions.
+
+## Overview
+
+This project is built with:
+
+- **Next.js 16 (App Router)**
+- **React 19**
+- **TypeScript**
+- **Tailwind CSS v4**
+- **Shadcn UI + Radix UI**
+- **Vercel AI SDK**
+
+## Engineering Principles
+
+- Write **concise, readable TypeScript** using functional patterns.
+- Prefer **React Server Components** where possible; minimize `use client`.
+- Keep logic modular and reusable.
+- Follow **DRY**, early returns, and clear naming (`isLoading`, `handleSubmit`).
+
+## Component & File Conventions
+
+- Directories: `components/auth-wizard`, `lib/utils`, etc.
+- Export components as **named exports**.
+- Prefix handlers with `handle`.
+- Use **interfaces** instead of `type` aliases when defining shapes.
+
+## State & Data
+
+- Prefer `useActionState` / `useFormStatus` over legacy form state.
+- Fetch data in **Server Components** whenever possible.
+- Use `cache: 'force-cache'` only for explicitly cacheable data.
+
+## Styling
+
+- Use Tailwind with a **mobile-first** approach.
+- Combine with Shadcn/Radix primitives.
+- Keep spacing and typography consistent.
+
+## Testing & Quality
+
+- Follow ESLint + Prettier formatting.
+- Ensure TypeScript strict mode passes.
+- Validate accessibility and performance.
+
+> For deeper architecture, examples, and AI SDK integration rules, see `learnhub-extended.mdc`.
