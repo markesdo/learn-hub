@@ -38,7 +38,7 @@ export function ResourceForm() {
           {/* Title Field */}
           <div className="space-y-2">
             <Label htmlFor="title">
-              Title <span className="text-red-500">*</span>
+              Title <span className="text-red-700">*</span>
             </Label>
             <Input
               id="title"
@@ -51,15 +51,15 @@ export function ResourceForm() {
               disabled={isPending}
             />
             {state?.errors?.title && (
-              <p className="text-sm text-red-600">{state.errors.title[0]}</p>
+              <p className="text-sm text-red-700">{state.errors.title[0]}</p>
             )}
-            <p className="text-xs text-zinc-500">3-100 characters</p>
+            <p className="text-xs text-zinc-600">3-100 characters</p>
           </div>
 
           {/* URL Field */}
           <div className="space-y-2">
             <Label htmlFor="url">
-              URL <span className="text-red-500">*</span>
+              URL <span className="text-red-700">*</span>
             </Label>
             <Input
               id="url"
@@ -70,15 +70,15 @@ export function ResourceForm() {
               disabled={isPending}
             />
             {state?.errors?.url && (
-              <p className="text-sm text-red-600">{state.errors.url[0]}</p>
+              <p className="text-sm text-red-700">{state.errors.url[0]}</p>
             )}
-            <p className="text-xs text-zinc-500">Must start with http:// or https://</p>
+            <p className="text-xs text-zinc-600">Must start with http:// or https://</p>
           </div>
 
           {/* Type Field */}
           <div className="space-y-2">
             <Label htmlFor="type">
-              Type <span className="text-red-500">*</span>
+              Type <span className="text-red-700">*</span>
             </Label>
             <Select name="type" required disabled={isPending}>
               <SelectTrigger id="type">
@@ -91,7 +91,7 @@ export function ResourceForm() {
               </SelectContent>
             </Select>
             {state?.errors?.type && (
-              <p className="text-sm text-red-600">{state.errors.type[0]}</p>
+              <p className="text-sm text-red-700">{state.errors.type[0]}</p>
             )}
           </div>
 
@@ -109,9 +109,9 @@ export function ResourceForm() {
               onChange={(e) => setDescription(e.target.value)}
             />
             {state?.errors?.description && (
-              <p className="text-sm text-red-600">{state.errors.description[0]}</p>
+              <p className="text-sm text-red-700">{state.errors.description[0]}</p>
             )}
-            <p className="text-xs text-zinc-500">
+            <p className="text-xs text-zinc-600">
               {remainingChars} characters remaining (max {maxDescriptionLength})
             </p>
           </div>

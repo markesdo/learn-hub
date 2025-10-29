@@ -6,7 +6,7 @@ export async function Header() {
   const user = await getUser();
 
   return (
-    <header className="border-b border-zinc-200 bg-white/80 backdrop-blur-sm">
+    <header className="border-b border-zinc-400 bg-white/80 backdrop-blur-sm">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
@@ -21,7 +21,7 @@ export async function Header() {
           <nav className="hidden items-center gap-8 md:flex">
             <Link
               href="/resources"
-              className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900"
+              className="text-sm font-medium text-zinc-700 transition-colors hover:text-zinc-900"
             >
               Resources
             </Link>
@@ -29,13 +29,13 @@ export async function Header() {
               <>
                 <Link
                   href="/dashboard"
-                  className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900"
+                  className="text-sm font-medium text-zinc-700 transition-colors hover:text-zinc-900"
                 >
                   Dashboard
                 </Link>
                 <Link
                   href="/submit"
-                  className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900"
+                  className="text-sm font-medium text-zinc-700 transition-colors hover:text-zinc-900"
                 >
                   Submit
                 </Link>

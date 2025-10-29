@@ -84,7 +84,7 @@ export function AuthForm() {
                   minLength={3}
                   maxLength={20}
                 />
-                <p className="text-xs text-zinc-500">
+                <p className="text-xs text-zinc-600">
                   3-20 characters, letters, numbers, and underscores only
                 </p>
               </div>
@@ -112,7 +112,7 @@ export function AuthForm() {
                   autoComplete="new-password"
                   minLength={6}
                 />
-                <p className="text-xs text-zinc-500">At least 6 characters</p>
+                <p className="text-xs text-zinc-600">At least 6 characters</p>
               </div>
 
               {signUpState?.error && (

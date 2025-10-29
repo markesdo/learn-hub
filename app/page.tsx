@@ -35,7 +35,7 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {/* Feature 1 */}
-          <div className="rounded-lg border border-zinc-200 bg-white p-6 shadow-sm">
+          <div className="rounded-lg border border-zinc-300 bg-white p-6 shadow-sm">
             <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-100">
               <svg
                 className="h-6 w-6 text-zinc-900"
@@ -58,7 +58,7 @@ export default function Home() {
           </div>
 
           {/* Feature 2 */}
-          <div className="rounded-lg border border-zinc-200 bg-white p-6 shadow-sm">
+          <div className="rounded-lg border border-zinc-300 bg-white p-6 shadow-sm">
             <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-100">
               <svg
                 className="h-6 w-6 text-zinc-900"
@@ -81,7 +81,7 @@ export default function Home() {
           </div>
 
           {/* Feature 3 */}
-          <div className="rounded-lg border border-zinc-200 bg-white p-6 shadow-sm">
+          <div className="rounded-lg border border-zinc-300 bg-white p-6 shadow-sm">
             <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-100">
               <svg
                 className="h-6 w-6 text-zinc-900"
@@ -111,7 +111,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-white sm:text-4xl">
             Ready to get started?
           </h2>
-          <p className="mt-4 text-lg text-zinc-300">
+          <p className="mt-4 text-lg text-zinc-200">
             Join our community and start discovering quality learning resources today.
           </p>
           <div className="mt-8">

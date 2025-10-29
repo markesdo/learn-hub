@@ -26,7 +26,7 @@ const typeConfig = {
   },
   pdf: {
     label: 'PDF',
-    className: 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200',
+    className: 'bg-orange-100 text-orange-900 dark:bg-orange-900 dark:text-orange-200',
   },
 };
 
@@ -68,7 +68,7 @@ export function ResourceCard({
           )}
 
           {/* Social Stats */}
-          <div className="flex items-center gap-4 text-xs text-zinc-500 dark:text-zinc-400">
+          <div className="flex items-center gap-4 text-xs text-zinc-600 dark:text-zinc-400">
             <div className="flex items-center gap-1">
               <Heart className="h-3.5 w-3.5" />
               <span>{likeCount}</span>

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="border-t border-zinc-200 bg-white">
+    <footer className="border-t border-zinc-400 bg-white">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {/* Brand */}
@@ -76,7 +76,7 @@ export function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="mt-12 border-t border-zinc-200 pt-8">
+        <div className="mt-12 border-t border-zinc-400 pt-8">
           <p className="text-center text-sm text-zinc-600">
             © {new Date().getFullYear()} LearnHub. All rights reserved.
           </p>
