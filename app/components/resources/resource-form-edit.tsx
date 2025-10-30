@@ -133,7 +133,7 @@ export function ResourceEditForm({ resource }: ResourceEditFormProps) {
 
           {/* Action Buttons */}
           <div className="flex gap-3">
-            <Button type="submit" className="flex-1" disabled={isPending}>
+            <Button type="submit" className="flex-1 bg-zinc-900 text-white hover:bg-zinc-800" disabled={isPending}>
               {isPending ? 'Updating...' : 'Update Resource'}
             </Button>
             <Link href={`/resource/${resource.id}`} className="flex-1">

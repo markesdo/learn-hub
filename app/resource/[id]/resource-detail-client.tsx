@@ -105,7 +105,7 @@ export function ResourceDetailClient({
       <Card>
         <CardHeader>
           <div className="flex items-start justify-between gap-4">
-            <div className="space-y-2">
+            <div className="space-y-2 flex-1">
               <div className="flex items-center gap-2">
                 <span
                   className={`inline-flex rounded-full px-3 py-1 text-xs font-medium ${typeInfo.className}`}
@@ -121,6 +121,14 @@ export function ResourceDetailClient({
                   {createdDate}
                 </span>
               </CardDescription>
+            </div>
+            <div className="flex items-start">
+              <LikeButton
+                resourceId={resource.id}
+                initialLikeCount={likeCount}
+                initialIsLiked={isLiked}
+                userId={userId}
+              />
             </div>
           </div>
         </CardHeader>
@@ -151,15 +159,6 @@ export function ResourceDetailClient({
                 Open Resource
               </Button>
             </a>
-          </div>
-
-          <div className="border-t pt-6">
-            <LikeButton
-              resourceId={resource.id}
-              initialLikeCount={likeCount}
-              initialIsLiked={isLiked}
-              userId={userId}
-            />
           </div>
 
           {isOwner && (

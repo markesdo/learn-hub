@@ -124,7 +124,7 @@ export function ResourceForm() {
           )}
 
           {/* Submit Button */}
-          <Button type="submit" className="w-full" disabled={isPending}>
+          <Button type="submit" className="w-full bg-zinc-900 text-white hover:bg-zinc-800" disabled={isPending}>
             {isPending ? 'Creating Resource...' : 'Create Resource'}
           </Button>
         </form>
