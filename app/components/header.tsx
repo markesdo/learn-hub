@@ -1,7 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getUser } from "@/app/actions/auth";
 import { UserMenu } from "./auth/user-menu";
-import { BookOpen } from "lucide-react";
 import { HeaderNav } from "./header-nav";
 
 export async function Header() {
@@ -12,15 +12,15 @@ export async function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 shadow-lg transition-transform group-hover:scale-105">
-              <BookOpen className="h-6 w-6 text-white" strokeWidth={2.5} />
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-white/20 to-transparent"></div>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-tight text-zinc-900">LearnHub</span>
-              <span className="text-[10px] font-medium text-zinc-500 -mt-0.5">Knowledge Shared</span>
-            </div>
+          <Link href="/" className="group">
+            <Image
+              src="/learnhub_logo.png"
+              alt="LearnHub - Knowledge Shared"
+              width={400}
+              height={100}
+              className="h-20 w-auto transition-transform group-hover:scale-105"
+              priority
+            />
           </Link>
 
           {/* Navigation */}
