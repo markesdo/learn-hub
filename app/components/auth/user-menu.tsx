@@ -24,14 +24,14 @@ export function UserMenu({ username, email }: UserMenuProps) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" className="rounded-full">
+        <Button variant="outline" className="rounded-full bg-white hover:bg-zinc-50">
           @{username}
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-56">
         <DropdownMenuLabel>
           <div className="flex flex-col space-y-1">
-            <p className="text-sm font-medium">@{username}</p>
+            <p className="text-sm font-medium text-zinc-900">@{username}</p>
             <p className="text-xs text-zinc-500">{email}</p>
           </div>
         </DropdownMenuLabel>

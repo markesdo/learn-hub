@@ -64,7 +64,7 @@ export function AuthForm() {
                 </div>
               )}
 
-              <Button type="submit" className="w-full" disabled={isSignInPending}>
+              <Button type="submit" className="w-full bg-zinc-900 text-white hover:bg-zinc-800" disabled={isSignInPending}>
                 {isSignInPending ? 'Signing in...' : 'Sign In'}
               </Button>
             </form>
@@ -121,7 +121,7 @@ export function AuthForm() {
                 </div>
               )}
 
-              <Button type="submit" className="w-full" disabled={isSignUpPending}>
+              <Button type="submit" className="w-full bg-zinc-900 text-white hover:bg-zinc-800" disabled={isSignUpPending}>
                 {isSignUpPending ? 'Creating account...' : 'Create Account'}
               </Button>
             </form>

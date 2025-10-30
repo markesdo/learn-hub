@@ -25,18 +25,18 @@ export function HeaderNav({ isAuthenticated }: HeaderNavProps) {
 
   return (
     <nav className="hidden items-center gap-2 md:flex">
-      <Link
-        href="/resources"
-        className={`rounded-lg px-4 py-2 text-sm font-medium transition-all ${
-          isActive('/resources')
-            ? 'bg-zinc-900 text-white shadow-sm'
-            : 'text-zinc-700 hover:bg-zinc-100 hover:text-zinc-900'
-        }`}
-      >
-        Resources
-      </Link>
       {isAuthenticated && (
         <>
+          <Link
+            href="/resources"
+            className={`rounded-lg px-4 py-2 text-sm font-medium transition-all ${
+              isActive('/resources')
+                ? 'bg-zinc-900 text-white shadow-sm'
+                : 'text-zinc-700 hover:bg-zinc-100 hover:text-zinc-900'
+            }`}
+          >
+            Resources
+          </Link>
           <Link
             href="/dashboard"
             className={`rounded-lg px-4 py-2 text-sm font-medium transition-all ${
